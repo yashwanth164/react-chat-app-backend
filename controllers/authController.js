@@ -240,7 +240,7 @@ exports.forgotPassword = async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
 
   try {
-    const resetURL = `https://kukuchat.com/auth/reset-password/?code=${resetToken}`;
+    const resetURL = `http://localhost:3000/auth/new-password/?token=${resetToken}`;
     
     //TODO -> send email with reset URL
     
